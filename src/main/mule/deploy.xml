@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="cd3795a2-bf0c-4cd5-a361-f29adeeb0f7b" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="deployFlow" doc:id="c06568bc-9836-440d-b288-68d33fc2d112" >
+		<http:listener doc:name="Listener" doc:id="1f8f16a1-9b3a-4832-a30b-2ace0f1757e3" config-ref="HTTP_Listener_config" path="/deploy"/>
+		<logger level="INFO" doc:name="Logger" doc:id="031281dd-0764-46e3-998b-218bee013902" message='#["HI prasad welcome to Mule"]'/>
+	</flow>
+</mule>
