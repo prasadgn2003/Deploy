@@ -39,8 +39,8 @@
 						<applicationName>my-mule-app</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
-						<connectedAppClientId>${connectedApp.clientId}</connectedAppClientId>
-						<connectedAppClientSecret>${connectedApp.clientSecret}</connectedAppClientSecret>
+						<connectedAppClientId>66b515ef7f394beb9e5d692535d46b42</connectedAppClientId>
+						<connectedAppClientSecret>4cfcA7Ea046e4611a529efB842140FFE</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 					</cloudhub2Deployment>
 				</configuration>
